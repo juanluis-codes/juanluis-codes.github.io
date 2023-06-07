@@ -1,0 +1,39 @@
+:root {
+    --main-container-height: 70vh;
+}
+
+#about-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-header-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    float: left;
+}
+
+#main-title {
+    margin: 3%;
+    font-size: 25px;
+}
+
+#about-text-container {
+    margin-top: 3%;
+    font-size: 17px;
+}
+
+
+@media screen and (max-width: 576px) {
+    #about-header-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+    }
+
+    #main-title {
+        display: none;
+    }
+}

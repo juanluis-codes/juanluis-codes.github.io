@@ -1,0 +1,67 @@
+:root {
+    --circle-signs-width: 10px;
+
+    --main-container-height: 80vh;
+    --terminal-container-bar-height: 5vh;
+    --circle-signs-height: 10px;
+
+    --circle-signs-radius: 50%;
+    --about-container-radius: 20px;
+
+    --p-2: 2%;
+
+    --m-0-5: .5%;
+    --m-1: 1%;
+
+    --terminal-bar-bg: rgb(60, 60, 60);
+    --circle-signs-red-bg: rgb(255, 0, 0);
+    --circle-signs-yellow-bg: rgb(255, 255, 0);
+    --circle-signs-green-bg: rgb(0, 255, 34);
+    --about-container-hover-bg: rgb(242, 240, 235);
+}
+
+main {
+    height: var(--main-container-height);
+}
+
+#terminal-container-bar {
+    height: var(--terminal-container-bar-height);
+    display: flex;
+    align-items: center;
+    background-color: var(--terminal-bar-bg);
+}
+
+.circle {
+    width: var(--circle-signs-width);
+    height: var(--circle-signs-height);
+    border-radius: var(--circle-signs-radius);
+    margin-left: var(--m-0-5);
+    margin-right: var(--m-0-5);
+}
+
+#circle-red {
+    margin-left: var(--m-1);
+    background-color: var(--circle-signs-red-bg);
+}
+
+#circle-yellow {
+    background-color: var(--circle-signs-yellow-bg);
+}
+
+#circle-green {
+    background-color: var(--circle-signs-green-bg);
+}
+
+#about-container {
+    padding: 0;
+    border-radius: var(--about-container-radius);
+    padding: var(--p-2);
+    transition: 0.1s ease-in-out;
+    text-align: center;
+}
+
+#about-container:hover {
+    background-color: var(--about-container-hover-bg);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}

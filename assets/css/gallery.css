@@ -1,0 +1,191 @@
+@font-face {
+    font-family: poor-story;
+    src: url(../fonts/Poor_Story/PoorStory-Regular.ttf)
+}
+
+:root {
+    --title-width: 100%;
+
+    --title-font-family: poor-story;
+}
+
+#title {
+    width: var(--title-width);
+    text-align: center;
+    margin: 0;
+    font-family: var(--title-font-family);
+}
+
+#first-sec {
+    width: 100%;
+    height: 170vh;
+    background-color: aqua;
+}
+
+#first-sec-subsec {
+    width: 33%;
+    float: left;
+}
+
+#img-1-1 {
+    width: 100%;
+    float: right;
+    margin-bottom: 1.1%;
+    animation: changeImage1 30s linear infinite;
+}
+
+@keyframes changeImage1 {
+    0% {
+        content: url(../images/gallery1-1.JPG);
+    }
+
+    2.5% {
+        opacity: 0;
+    }
+
+    5% {
+        content: url(../images/gallery1-2.JPG);
+        opacity: 1;
+    }
+
+    35% {
+        content: url(../images/gallery1-2.JPG);
+        opacity: 1;
+    }
+
+    37.5% {
+        opacity: 0;
+    }
+
+    40% {
+        content: url(../images/gallery1-3.JPG);
+        opacity: 1;
+    }
+
+    70% {
+        content: url(../images/gallery1-3.JPG);
+        opacity: 1;
+    }
+
+    72.5% {
+        opacity: 0;
+    }
+
+    75% {
+        content: url(../images/gallery1-1.JPG);
+        opacity: 1;
+    }
+
+    100% {
+        content: url(../images/gallery1-1.JPG);
+        opacity: 1;
+    }
+}
+
+#img-1-2 {
+    width: 66.5%;
+    float: right;
+    animation: changeImage2 30s linear infinite;
+}
+
+@keyframes changeImage2 {
+    0% {
+        content: url(../images/gallery1-2.JPG);
+    }
+
+    2.5% {
+        opacity: 0;
+    }
+
+    5% {
+        content: url(../images/gallery1-3.JPG);
+        opacity: 1;
+    }
+
+    35% {
+        content: url(../images/gallery1-3.JPG);
+        opacity: 1;
+    }
+
+    37.5% {
+        opacity: 0;
+    }
+
+    40% {
+        content: url(../images/gallery1-1.JPG);
+        opacity: 1;
+    }
+
+    70% {
+        content: url(../images/gallery1-1.JPG);
+        opacity: 1;
+    }
+
+    72.5% {
+        opacity: 0;
+    }
+
+    75% {
+        content: url(../images/gallery1-2.JPG);
+        opacity: 1;
+    }
+
+    100% {
+        content: url(../images/gallery1-2.JPG);
+        opacity: 1;
+    }
+}
+
+#img-1-3 {
+    width: 100%;
+    float: right;
+    animation: changeImage3 30s linear infinite;
+}
+
+@keyframes changeImage3 {
+    0% {
+        content: url(../images/gallery1-3.JPG);
+    }
+
+    2.5% {
+        opacity: 0;
+    }
+
+    5% {
+        content: url(../images/gallery1-1.JPG);
+        opacity: 1;
+    }
+
+    35% {
+        content: url(../images/gallery1-1.JPG);
+        opacity: 1;
+    }
+
+    37.5% {
+        opacity: 0;
+    }
+
+    40% {
+        content: url(../images/gallery1-2.JPG);
+        opacity: 1;
+    }
+
+    70% {
+        content: url(../images/gallery1-2.JPG);
+        opacity: 1;
+    }
+
+    72.5% {
+        opacity: 0;
+    }
+
+    75% {
+        content: url(../images/gallery1-3.JPG);
+        opacity: 1;
+    }
+
+    100% {
+        content: url(../images/gallery1-3.JPG);
+        opacity: 1;
+    }
+}
