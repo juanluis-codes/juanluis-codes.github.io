@@ -11,7 +11,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/projects.css">
+    <link rel="stylesheet" href="../assets/css/articles.css">
     <title>Hello, world!</title>
 </head>
 
@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Projects</a>
+                <a class="navbar-brand" href="index.html">Blog</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -29,8 +29,8 @@
                     <div class="navbar-nav">
                         <a class="nav-link" href="../index.html">Home</a>
                         <a class="nav-link" href="../about/about.html">About</a>
-                        <a class="nav-link" href="../blog/blog.html">Blog</a>
-                        <a class="nav-link active" href="projects.html">Projects</a>
+                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link active" href="../projects/projects.html">Projects</a>
                         <a class="nav-link" aria-current="page" href="../contact/contact.html">Contact</a>
                     </div>
                 </div>
@@ -39,30 +39,18 @@
     </header>
 
     <main class="container mt-5">
-        <section class="newscontainer" id ="noticias">
-            <article class="card new" style="width: 18rem;">
-                <img src="../assets/images/project-unigreen.jpg" class="card-img-top">
-                <section class="card-body">
-                    <h5 class="card-title">UNIgreen</h5>
-                    <p class="card-text">I collaborated in the development of the <a href="https://unigreen-alliance.eu/">UNIgreen webpage</a>.</p>
-                </section>
-            </article>
+        <section class="container pt-2 pb-2" id ="article">
+            <h6 class="card-title">Tutorial</h6>
+            <h4 class="card-title">Pyspark local installation</h4>
+            <p class="card-text">This article explains how to install pyspark in your local machine.</p>
+            <button type="button" class="btn btn-primary">Read more</button>
+        </section>
 
-            <article class="card new" style="width: 18rem;">
-                <img src="../assets/images/project-orpheus.jpg" class="card-img-top">
-                <section class="card-body">
-                    <h5 class="card-title">Orpheus: On Hollow Traces</h5>
-                    <p class="card-text">During my studies in Stuttgart, I was part of the development of the game <a href="https://www.hdm-stuttgart.de/medianight/projekte/3895">Orpheus: On Hollow Traces</a>.</p>
-                </section>
-            </article>
-
-            <article class="card new" style="width: 18rem;">
-                <img src="../assets/images/img1.jpg" class="card-img-top">
-                <section class="card-body">
-                    <h5 class="card-title">My Own Port-folio</h5>
-                    <p class="card-text">I coded this port-folio using HTML5, CSS3 and JS.</p>
-                </section>
-            </article>
+        <section class="container pt-2 pb-2 mt-4" id ="article">
+            <h6 class="card-title">Tutorial</h6>
+            <h4 class="card-title">Pyspark local installation</h4>
+            <p class="card-text">This article explains how to install pyspark in your local machine.</p>
+            <button type="button" class="btn btn-primary">Read more</button>
         </section>
     </main>
 
