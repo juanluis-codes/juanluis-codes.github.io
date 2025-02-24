@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Blog</a>
+                <a class="navbar-brand" href="../../index.html">Blog</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -29,8 +29,8 @@
                     <div class="navbar-nav">
                         <a class="nav-link" href="../../index.html">Home</a>
                         <a class="nav-link" href="../../about/about.html">About</a>
-                        <a class="nav-link" href="../blog.html">Blog</a>
-                        <a class="nav-link active" href="../../projects/projects.html">Projects</a>
+                        <a class="nav-link active" href="../blog.html">Blog</a>
+                        <a class="nav-link" href="../../projects/projects.html">Projects</a>
                         <a class="nav-link" aria-current="page" href="../../contact/contact.html">Contact</a>
                     </div>
                 </div>
@@ -38,12 +38,92 @@
         </nav>
     </header>
 
-    <main class = "container mt-5">
-        <h1>Instalación de Pyspark</h1>
-        <p>Este artículo explica cómo instalar PySpark en tu máquina local, tanto en sistemas operativos Windows como Linux, 
-            cubriendo los pasos necesarios para configurar el entorno y verificar la instalación.</p>
+    <main class="container mt-5">
+        <p><a href="../blog.html">Blog</a> > <a href="pyspark.html">Pyspark Windows Installation</a></p>
+        <h1>How to install PySpark</h1>
+        <p>This article explains what is PySpark and how can it be installed in a Windows computer, the Linux version
+            will be uploaded in a later post.</p>
 
-        <h2>Instalación en Windows</h2>
+        <nav>
+            <ol class="index">
+                <li><a href="#section1">What is pyspark?</a></li>
+                <li><a href="#section2">Windows installation</a></li>
+                <li><a href="#section3">Verify the Windows installation</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="section1">What is PySpark?</h2>
+        <p>Apache Spark is a powerful distributed computing framework designed for big data processing. PySpark, its
+            Python API,
+            allows developers to leverage Spark’s capabilities using Python, making it a popular choice for data
+            engineers and analysts
+            working with large datasets. hether you're a beginner looking to explore big data processing or a
+            professional setting up
+            PySpark for the first time, this guide will help you get started quickly.</p>
+        <h2 id="section2">Windows installation</h2>
+        <ol>
+            <li class="mt-2">Download and Install Java Development Kit (JDK) from <a
+                    href="https://www.oracle.com/java/technologies/downloads/archive/">oracle</a>.
+                It needs to be known that PySpark only admits JKD versions 8 and 11. The installer must be chosen
+                depending on the architecture (32 o 64 bits).</li>
+            <li class="mt-2">Click on the installer, the installation will begin. Once finished, open the command prompt
+                and execute
+                the command <span class="px-2 py-1 rounded command">java -version</span> to verify the installation</li>
+            <div class="div-img">
+                <img class="mt-3 mb-3 horizontal-img" src="../../assets/images/pyspark-install-dir/1.png">
+            </div>
+            <li class="mt-2">Download Spark from <a href="https://spark.apache.org/downloads.html">Spark downloads
+                    page</a>. It is highly recommended to download the last version
+                available. Extract the files in the desired location.</li>
+            <div class="div-img">
+                <img class="mt-3 mb-3 horizontal-img" src="../../assets/images/pyspark-install-dir/4.png">
+            </div>
+            <li class="mt-2">After downloading Spark, <a href="https://github.com/steveloughran/winutils">Winutils</a>
+                will need to be installed and placed in the correct folder.
+                Make sure to download the version corresponding to your hadoop version. For example. If you downloaded
+                hadoop 3.0.0, download the winutils for 3.0.0</li>
+            <div class="div-img">
+                <img class="mt-3 mb-3 horizontal-img" src="../../assets/images/pyspark-install-dir/5.png">
+            </div>
+            <div class="div-img">
+                <img class="mt-3 mb-3 horizontal-img" src="../../assets/images/pyspark-install-dir/6.png">
+            </div>
+            <li class="mt-2">Create a new folder named after "Winutils" and create inside a "bin" folder. Move
+                "winutils.exe" to this folder.</li>
+            <div class="div-img">
+                <img class="mt-3 mb-3 horizontal-img" src="../../assets/images/pyspark-install-dir/7.png">
+            </div>
+            <li class="mt-2">In the search bar, write "Edit the system environment variables" and then click on
+                "Environment Variables".</li>
+            <div class="div-img">
+                <img class="mt-3 mb-3 vertical-img" src="../../assets/images/pyspark-install-dir/2.png">
+            </div>
+            <li class="mt-2">Click on "New". A new variable will need to be created named after <span
+                    class="px-2 py-1 rounded command">JAVA_HOME</span> and the value will need to
+                be the directory where Java was installed (where the "bin" folder for Java is located).</li>
+            <div class="div-img">
+                <img class="mt-3 mb-3 vertical-img" src="../../assets/images/pyspark-install-dir/3.png">
+            </div>
+            <li class="mt-2">Click on "New" again. A new variable will need to be created named after <span
+                    class="px-2 py-1 rounded command">HADOOP_HOME</span> and the value will need to
+                be the directory where Winutils was installed (where the "bin" folder for Winutils is located).</li>
+            <li class="mt-2">Create a new variable named after <span class="px-2 py-1 rounded command">SPARK_HOME</span>
+                and the value will need to
+                be the directory where Spark was installed (where the "bin" folder for Winutils is located).</li>
+            <li class="mt-2">Add to the <span class="px-2 py-1 rounded command">PATH</span> variable <span
+                    class="px-2 py-1 rounded command">%JAVA_HOME%\bin</span>
+                <span class="px-2 py-1 rounded command">%SPARK_HOME%\bin</span>. To do this, click on "Edit".
+            </li>
+            <div class="div-img">
+                <img class="mt-3 mb-3 vertical-img" src="../../assets/images/pyspark-install-dir/8.png">
+            </div>
+        </ol>
+        <h2 id="section3">Verify the Windows intallation</h2>
+        <p>If everything was correctly installed, writing <span class="px-2 py-1 rounded command">pyspark</span> in the
+            command prompt should result in:</p>
+        <div class="div-img">
+            <img class="mt-3 mb-3 horizontal-img" src="../../assets/images/pyspark-install-dir/9.png">
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
